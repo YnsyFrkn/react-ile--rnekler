@@ -1,0 +1,120 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #f5efe7;
+}
+
+.container {
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.icons {
+  cursor: pointer;
+}
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.textareas {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.currentTranslation {
+  position: relative;
+  width: 300px;
+  height: 250px;
+}
+
+.custom-textarea {
+  resize: none; /* Kullanıcı tarafından yeniden boyutlandırmayı kapat */
+  overflow-y: auto; /* Uzun metin taşarsa kaydırılabilir */
+  font-size: 14px;
+  font-family: "Arial";
+  padding: 8px;
+  border: 1px solid #f8f9fb;
+  border-radius: 4px;
+  width: 300px;
+  height: 250px;
+  padding-right: 35px;
+}
+
+.targetLanguage {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 300px;
+  height: 250px;
+}
+
+.btn {
+  margin-top: 10px;
+  width: 630px;
+  text-align: center;
+  padding: 10px;
+  background-color: tomato;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+}
+.btn:active {
+  transform: scale(0.98);
+}
+
+.copy {
+  position: absolute;
+  top: 11px;
+  right: 20px;
+  cursor: pointer;
+}
+.copy:hover {
+  color: #007bff;
+}
+
+.delete {
+  position: absolute;
+  top: 9px;
+  right: 20px;
+  cursor: pointer;
+}
+.delete:hover {
+  color: #007bff;
+}
+
+/* responsive tasarım */
+
+@media screen and (max-width: 650px) {
+  .container .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .textareas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  .targetLanguage {
+    margin-top: -20px;
+  }
+  .btn {
+    width: 300px;
+  }
+}
